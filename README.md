@@ -40,3 +40,12 @@
                 android:gravity="center"
                 android:text="北京"
                 android:textColor="#7d7d7d" />
+##2.在Activity中应用
+mPopWindow = new MPopWindow(MainActivity.this);<br>
+		mPopWindow.setLayoutId(R.layout.index_popu);<br>
+		mPopWindow.setWindow(WindowUtil.getWidth(), WindowUtil.getHeigt());<br>
+		popContent = mPopWindow.getContentView();<br>
+		mPopWindow.setViewStartAnimationId(<br>
+						(LinearLayout) popContent.findViewById(R.id.ly_content),<br>
+						R.anim.fade_in);<br>
+				mPopWindow.showPopupWindow(tvCity);<br>//tvCity为你要显示的弹出框的父类，具体实现可参见源代码
